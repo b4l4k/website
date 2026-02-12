@@ -1,0 +1,265 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Balaniouk</title>
+
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+</head>
+<body>
+    <!-- TOP IMAGE Section -->
+    <header class="top-image">
+        <img src="{% static 'main/img/background.jpg' %}" alt="Photography of Mount Sefton in New Zealand">
+        <div class="overlay-text" data-text="Victor Balaniouk">Victor Balaniouk</div>
+    </header>
+    <div class="text-section">
+        <p>
+            You may be wondering why there is a nature photo on this landing page, given that it's a developer portfolio.
+            To be honest, I just find it beautiful. I took it in the summer of 2023 while visiting a friend in New Zealand.<br>
+            P.S: I highly recommend visiting at least once in your lifetime. You won't regret it!
+        </p>
+    </div>
+        
+    <!-- ABOUT ME Section -->
+    <div class="about-section">
+        <div class="about-content">
+            <div class="logo-container">
+                <img src="{% static 'main/img/logo.jpeg' %}" alt="Logo" class="logo">
+            </div>
+            <div class="about-text">
+                <h2 class="about-title">ABOUT ME</h2>
+                <p class="about-description">
+                    I work as a Data Scientist for Catalonian public administration.
+                    Alongside my professional role, I am pursuing an Applied Data Science degree at Universitat Oberta de Catalunya.
+                    I am committed to professional growth, continuous learning, and embracing
+                    new challenges in the field of technology, Data Science, Machine Learning and AI.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SKILLS Section -->
+    <div class="skills-section">
+        <div class="skills-block">
+            <h2 class="skills-title">SKILLS</h2>
+            <div class="skills-grid">
+                <img src="{% static 'main/img/languages/python_logo.svg' %}" alt="Python" class="skill-logo">
+                <img src="{% static 'main/img/languages/pandas_logo.svg' %}" alt="Django" class="skill-logo">
+                <img src="{% static 'main/img/languages/django.svg' %}" alt="Pandas" class="skill-logo">
+                <img src="{% static 'main/img/languages/postgresql_logo.svg' %}" alt="PostgreSQL" class="skill-logo">
+                <img src="{% static 'main/img/languages/powerbi_logo.svg' %}" alt="Power BI" class="skill-logo">
+                <img src="{% static 'main/img/languages/html5_logo.svg' %}" alt="HTML5" class="skill-logo">
+                <img src="{% static 'main/img/languages/css3_logo.svg' %}" alt="CSS3" class="skill-logo">
+                <img src="{% static 'main/img/languages/git_logo.svg' %}" alt="Git" class="skill-logo">
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATES Section -->
+    <div class="certificates-section">
+        <div class="certificates-block">
+            <h2 class="certificates-title">CERTIFICATES</h2>
+            <div class="certificates-grid">
+                <div class="certificate-item">
+                    <h3 class="certificate-title">"Python Generation": a course for beginners</h3>
+                    <a href="https://stepik.org/cert/1573507?lang=en" target="_blank">
+                        <img src="{% static 'main/img/certificates/python_generation.png' %}" alt="Python Generation Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <h3 class="certificate-title">Python Programming</h3>
+                    <a href="https://stepik.org/cert/322312?lang=en" target="_blank">
+                        <img src="{% static 'main/img/certificates/python_programming.png' %}" alt="Python Programming Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <h3 class="certificate-title">Odoo 16 Certification</h3>
+                    <a href="https://drive.google.com/file/d/1jvYZaHtFfVgTo-w1NAfxySHBRd-vu8jt/view?usp=sharing" target="_blank">
+                        <img src="{% static 'main/img/certificates/odoo_certificate.png' %}" alt="Odoo 16 Certificate" class="certificate-image">
+                    </a>
+                </div>
+                <div class="certificate-item">
+                    <h3 class="certificate-title">Generative AI with LLM</h3>
+                    <a href="https://www.coursera.org/account/accomplishments/verify/PXLVVT4WYFQX" target="_blank">
+                        <img src="{% static 'main/img/certificates/generative_ai_with_llm.png' %}" alt="Generative AI with LLM Certificate" class="certificate-image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE Section -->
+    <div class="experience-section">
+        <div class="experience-block">
+            <h2 class="experience-title">EXPERIENCE</h2>
+            <div class="experience-content">
+                <div class="experience-item">
+                    <div class="experience-period">Apr 2025 - Now</div>
+                    <div class="experience-details">
+                        <h3 class="experience-job-title">Data Engineer</h3>
+                        <p class="experience-company">Sopra Steria</p>
+                        <ul class="experience-bullets">
+                            <li>Automate and enhance data processing pipelines using advanced Pandas factorization and NumPy, reducing execution performance of production workflows and real-time analytics.</li>
+                            <li>Build an end-to-end data pipeline from scratch, automating the ETL architectures to convert raw data into 30+ critical KPIs via custom PowerBI dashboards for data-driven decision-making.</li>
+                            <li>Orchestrate computerized maintenance of 15+ analytics workflows using Python scripts and API integration, and dependency management, ensuring system reliability, scalability, and fault tolerance.</li>
+                            <li>Deploy and architect an automated NLP pipeline, integrating optimized Large Language Models (LLMs) to extract structured information from unstructured text in daily production workflow.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-period">Apr 2023 - Mar 2025</div>
+                    <div class="experience-details">
+                        <h3 class="experience-job-title">Software Engineer</h3>
+                        <p class="experience-company">RRM Consultoria</p>
+                        <ul class="experience-bullets">
+                            <li>Engineered robust ETL systems connecting Odoo ERP with external APIs, and Pandas based transformation layers for high-quality data ingestion.</li>
+                            <li>Covered full software lifecycle of custom Python applications, from system design and architecture to deployment on the Odoo Marketplace, achieving commercial adoption by external clients.</li>
+                            <li>Acted as primary technical liaison for 30+ client projects, translating complex business and technical requirements into actionable data specifications and achieving tailored engineering solutions.</li>
+                            <li>Enforced high engineering standards through rigorous code reviews, technical documentation, and debugging, ensuring system stability while reducing by 50% onboarding process time and knowledge transfer.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-period">Aug 2021 - Mar 2023</div>
+                    <div class="experience-details">
+                        <h3 class="experience-job-title">Customer Service Support</h3>
+                        <p class="experience-company">Altanetica S.L.</p>
+                        <ul class="experience-bullets">
+                            <li>Collaborated closely with technical field teams to coordinate service interventions, enhancing resource allocation and aligning over 2.000+ clients needs to technical execution.</li>
+                            <li>Pursued a proactive approach to high-volume issue resolution, rapidly diagnosing technical inquiries and leading complex case lifecycles.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-period">Jun 2021 - Aug 2021</div>
+                    <div class="experience-details">
+                        <h3 class="experience-job-title">Waiter</h3>
+                        <p class="experience-company">Escrulls S.L.</p>
+                        <ul class="experience-bullets">
+                            <li>Worked closely with team members to smooth operations to manage.</li>
+                            <li>Dealt efficiently with problems under pressure during peak hours.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT Section -->
+    <div id="contact" class="contact-section">
+        <div class="contact-block">
+            <h2 class="contact-title">CONTACT</h2>
+            
+            <!-- Display messages -->
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="message-overlay">
+                        <div class="message-modal message-modal-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+            <form class="contact-form" method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder=" " required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="form-group message-group">
+                    <textarea id="message" name="message" placeholder=" " maxlength="300" required></textarea>
+                    <label for="message">Message</label>
+                    <div class="char-count">0/300 characters</div>
+                </div>
+                <button type="submit" class="send-button">Send message</button>
+            </form>
+        </div>
+    </div>
+            
+    <!-- FOOTER Section -->
+    <div class="footer-section">
+        <div class="footer-block">
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/victorbalaniouk/" target="_blank" class="footer-link">linkedin</a>
+                <a href="https://github.com/b4l4k" target="_blank" class="footer-link">github</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Character count functionality for message field
+        document.addEventListener('DOMContentLoaded', function() {
+            const messageField = document.getElementById('message');
+            const charCount = document.querySelector('.char-count');
+            
+            if (messageField && charCount) {
+                messageField.addEventListener('input', function() {
+                    const charLength = this.value.length;
+                    charCount.textContent = `${charLength}/300 characters`;
+                    
+                    if (charLength > 300) {
+                        charCount.style.color = '#dc3545';
+                    } else {
+                        charCount.style.color = '#737373';
+                    }
+                });
+            }
+            
+            // Modal functionality
+            const messageOverlay = document.querySelector('.message-overlay');
+            if (messageOverlay) {
+                // Auto-close after 10 seconds
+                setTimeout(function() {
+                    messageOverlay.style.transition = 'opacity 1s ease-out';
+                    messageOverlay.style.opacity = '0';
+                    setTimeout(function() {
+                        messageOverlay.remove();
+                        // Clear form after modal closes
+                        const form = document.querySelector('.contact-form');
+                        if (form) {
+                            form.reset();
+                        }
+                    }, 1000);
+                }, 10000);
+                
+                // Close on click outside modal
+                messageOverlay.addEventListener('click', function(e) {
+                    if (e.target === messageOverlay) {
+                        messageOverlay.style.transition = 'opacity 1s ease-out';
+                        messageOverlay.style.opacity = '0';
+                        setTimeout(function() {
+                            messageOverlay.remove();
+                            // Clear form after modal closes
+                            const form = document.querySelector('.contact-form');
+                            if (form) {
+                                form.reset();
+                            }
+                        }, 1000);
+                    }
+                });
+            }
+            
+            // Reset form on page load (in case of refresh)
+            window.addEventListener('load', function() {
+                const form = document.querySelector('.contact-form');
+                if (form) {
+                    form.reset();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
