@@ -1,6 +1,6 @@
-# Django Victor Balaniouk website
+# Victor Balaniouk website for $6.99
 
-The main purpose of this project is to learn the basics of Django and build my own personal website. Since the code isn't "rocket science," it doesn't have many comments—but I still think it could be helpful for someone starting out! :)
+The main purpose of this project is to learn the basics of Django and build my own personal website. Since the code isn't rocket science, it doesn't have many comments. But I  think it could be helpful for someone :)
 
 ## 💰 The "Low-Cost" Goal
 One of my main goals was to keep development as cheap as possible. Thanks to free hosting options, I managed to reach this goal by **paying only $6.99 for the domain.**
