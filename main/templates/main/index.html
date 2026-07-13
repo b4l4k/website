@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Balaniouk</title>
     <link rel="icon" type="image/png" href="{% static 'main/img/favicon.png' %}">
+    <link rel="preload" as="image" href="{% static 'main/img/background-1440.webp' %}" imagesrcset="{% static 'main/img/background-960.webp' %} 960w, {% static 'main/img/background-1440.webp' %} 1440w, {% static 'main/img/background-1920.webp' %} 1920w, {% static 'main/img/background-2560.webp' %} 2560w" imagesizes="100vw" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <script defer src="https://analytics.hotel4runners.com/script.js" data-website-id="e25b3e16-4252-4aca-834e-2219c9ce0e99" data-domains="victorbalaniouk.com, www.victorbalaniouk.com"></script>
 </head>
 <body>
     <!-- TOP IMAGE Section -->
     <header class="top-image">
-        <img src="{% static 'main/img/background.jpg' %}" alt="Photography of Mount Sefton in New Zealand">
+        <picture>
+            <source type="image/webp" srcset="{% static 'main/img/background-960.webp' %} 960w, {% static 'main/img/background-1440.webp' %} 1440w, {% static 'main/img/background-1920.webp' %} 1920w, {% static 'main/img/background-2560.webp' %} 2560w" sizes="100vw">
+            <source type="image/jpeg" srcset="{% static 'main/img/background-960.jpg' %} 960w, {% static 'main/img/background-1440.jpg' %} 1440w, {% static 'main/img/background-1920.jpg' %} 1920w" sizes="100vw">
+            <img src="{% static 'main/img/background-1920.jpg' %}" width="1920" height="1080" alt="Photography of Mount Sefton in New Zealand" loading="eager" decoding="async" fetchpriority="high">
+        </picture>
         <div class="overlay-text" data-text="Victor Balaniouk">Victor Balaniouk</div>
     </header>
     <div class="text-section">
@@ -26,7 +32,11 @@
     <div class="about-section">
         <div class="about-content">
             <div class="logo-container">
-                <img src="{% static 'main/img/logo.jpeg' %}" alt="Logo" class="logo">
+                <picture>
+                    <source type="image/webp" srcset="{% static 'main/img/logo-320.webp' %} 320w, {% static 'main/img/logo-640.webp' %} 640w" sizes="(max-width: 575px) 60vw, 320px">
+                    <source type="image/jpeg" srcset="{% static 'main/img/logo-320.jpeg' %} 320w, {% static 'main/img/logo-640.jpeg' %} 640w" sizes="(max-width: 575px) 60vw, 320px">
+                    <img src="{% static 'main/img/logo-640.jpeg' %}" alt="Portrait of Victor Balaniouk" class="logo" width="320" height="320" loading="lazy" decoding="async">
+                </picture>
             </div>
             <div class="about-text">
                 <h2 class="about-title">ABOUT ME</h2>
@@ -45,13 +55,13 @@
         <div class="skills-block">
             <h2 class="skills-title">SKILLS</h2>
             <div class="skills-grid">
-                <img src="{% static 'main/img/languages/python_logo.svg' %}" alt="Python" title="Python" class="skill-logo">
-                <img src="{% static 'main/img/languages/pytorch_logo.svg' %}" alt="PyTorch" title="PyTorch" class="skill-logo">
-                <img src="{% static 'main/img/languages/pandas_logo.svg' %}" alt="Pandas" title="Pandas" class="skill-logo">
-                <img src="{% static 'main/img/languages/postgresql_logo.svg' %}" alt="PostgreSQL" title="PostgreSQL" class="skill-logo">
-                <img src="{% static 'main/img/languages/django.svg' %}" alt="Django" title="Django" class="skill-logo">
-                <img src="{% static 'main/img/languages/powerbi_logo.svg' %}" alt="Power BI" title="Power BI" class="skill-logo">
-                <img src="{% static 'main/img/languages/git_logo.svg' %}" alt="Git" title="Git" class="skill-logo">
+                <img src="{% static 'main/img/languages/python_logo.svg' %}" alt="Python" title="Python" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/pytorch_logo.svg' %}" alt="PyTorch" title="PyTorch" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/pandas_logo.svg' %}" alt="Pandas" title="Pandas" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/postgresql_logo.svg' %}" alt="PostgreSQL" title="PostgreSQL" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/django.svg' %}" alt="Django" title="Django" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/powerbi_logo.svg' %}" alt="Power BI" title="Power BI" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/git_logo.svg' %}" alt="Git" title="Git" class="skill-logo" loading="lazy" decoding="async">
             </div>
         </div>
     </div>
@@ -64,25 +74,25 @@
                 <div class="certificate-item">
                     <h3 class="certificate-title">"Python Generation": a course for beginners</h3>
                     <a href="https://stepik.org/cert/1573507?lang=en" target="_blank">
-                        <img src="{% static 'main/img/certificates/python_generation.png' %}" alt="Python Generation Certificate" class="certificate-image">
+                        <img src="{% static 'main/img/certificates/python_generation.png' %}" alt="Python Generation Certificate" class="certificate-image" loading="lazy" decoding="async">
                     </a>
                 </div>
                 <div class="certificate-item">
                     <h3 class="certificate-title">Python Programming</h3>
                     <a href="https://stepik.org/cert/322312?lang=en" target="_blank">
-                        <img src="{% static 'main/img/certificates/python_programming.png' %}" alt="Python Programming Certificate" class="certificate-image">
+                        <img src="{% static 'main/img/certificates/python_programming.png' %}" alt="Python Programming Certificate" class="certificate-image" loading="lazy" decoding="async">
                     </a>
                 </div>
                 <div class="certificate-item">
                     <h3 class="certificate-title">Odoo 16 Certification</h3>
                     <a href="https://drive.google.com/file/d/1jvYZaHtFfVgTo-w1NAfxySHBRd-vu8jt/view?usp=sharing" target="_blank">
-                        <img src="{% static 'main/img/certificates/odoo_certificate.png' %}" alt="Odoo 16 Certificate" class="certificate-image">
+                        <img src="{% static 'main/img/certificates/odoo_certificate.png' %}" alt="Odoo 16 Certificate" class="certificate-image" loading="lazy" decoding="async">
                     </a>
                 </div>
                 <div class="certificate-item">
                     <h3 class="certificate-title">Generative AI with LLM</h3>
                     <a href="https://www.coursera.org/account/accomplishments/verify/PXLVVT4WYFQX" target="_blank">
-                        <img src="{% static 'main/img/certificates/generative_ai_with_llm.png' %}" alt="Generative AI with LLM Certificate" class="certificate-image">
+                        <img src="{% static 'main/img/certificates/generative_ai_with_llm.png' %}" alt="Generative AI with LLM Certificate" class="certificate-image" loading="lazy" decoding="async">
                     </a>
                 </div>
             </div>
