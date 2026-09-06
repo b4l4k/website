@@ -1,4 +1,4 @@
-# Victor Balaniouk website for $6.99
+# Victor Balaniouk website for $6.99 (*+ $7/month*)
 
 The main purpose of this project is to learn the basics of Django and build my own personal website. Since the code isn't rocket science, it doesn't have many comments. But I  think it could be helpful for someone :)
 
@@ -12,6 +12,8 @@ Aside from **Python** and **Django**, these are the tools that made this project
 * **[Cursor](https://cursor.com):** I used the free version, and it was a game-changer—about 80% of the code was written with Cursor's help.
 * **[Telegram Bot](https://telegram.org/blog/bot-revolution):** I use this as a messenger service to send me notifications whenever someone fills out the contact form.
 * **[Render](https://render.com):** The hosting service where the site is currently published. It's running on the **Free Tier** for now, though I might upgrade in the future.
+
+***UPD: I finally decided to move it to a virtual server because the website took a long time to load on Render’s free plan. It’s now hosted on Hetzner and costs $7/month.***
 
 ---
 *Feel free to explore the code!*
