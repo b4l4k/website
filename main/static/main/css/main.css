@@ -399,6 +399,268 @@ html, body {
     }
 }
 
+/* Projects use the same inset block and typography as Certificates. */
+.projects-section {
+    background-color: #ffffff;
+    padding: 3vh 7.5%;
+    display: flex;
+}
+
+.projects-block {
+    background-color: #1C3046;
+    color: #FFFFFF;
+    width: 100%;
+    min-width: 0;
+    padding: 3vh 4% 10vh;
+    margin: 2vh 0;
+}
+
+.projects-title {
+    font-family: 'concentral', sans-serif;
+    font-size: 36px;
+    padding: 1vh 5% 0.3vh;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 3vh;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4vh 2vw;
+    margin: 5vh 8% 0;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    font-family: 'metropolis', sans-serif;
+    text-align: center;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.8em;
+    margin: 0 0 0.5rem;
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.project-context {
+    min-height: 3em;
+    margin: 0 0 2vh;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.project-card {
+    display: flex;
+    perspective: 1200px;
+}
+
+.project-card-inner {
+    width: 100%;
+    min-width: 0;
+}
+
+.project-front,
+.project-back {
+    box-sizing: border-box;
+    min-width: 0;
+    border-radius: 8px;
+    background-color: #101F2D;
+}
+
+.project-front {
+    display: flex;
+    align-items: center;
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.project-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: clamp(16px, 1.8vw, 28px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: left;
+    font-size: clamp(14px, 1.1vw, 18px);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.project-back p {
+    margin: 0;
+}
+
+.project-link {
+    align-self: flex-start;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.5rem 0;
+    min-height: 44px;
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: 0.25em;
+}
+
+.project-toggle {
+    order: 1;
+    margin-top: 0.75rem;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    background-color: transparent;
+    color: #FFFFFF;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.project-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-toggle:focus-visible,
+.project-link:focus-visible {
+    outline: 2px solid #FFFFFF;
+    outline-offset: 4px;
+}
+
+/* Without JavaScript, the image, description and link remain visible. */
+.project-item.is-interactive .project-card-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    aspect-ratio: 1753 / 960;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.project-item.is-interactive .project-front,
+.project-item.is-interactive .project-back {
+    grid-area: 1 / 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.project-item.is-interactive .project-front {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1753 / 960;
+    cursor: pointer;
+}
+
+.project-item.is-interactive .project-image {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-item.is-interactive .project-back {
+    position: absolute;
+    inset: 0 0 auto;
+    min-height: 100%;
+    transform: rotateY(180deg);
+}
+
+.project-item.is-interactive.is-flipped .project-back {
+    position: relative;
+    inset: auto;
+    min-height: auto;
+}
+
+.project-item.is-flipped .project-card-inner {
+    aspect-ratio: auto;
+    transform: rotateY(180deg);
+}
+
+/* Compact desktop details fit the landscape image without enlarging the card. */
+@media (min-width: 769px) {
+    .project-back {
+        font-size: clamp(12px, 0.9vw, 16px);
+        line-height: 1.35;
+        padding: clamp(8px, 0.8vw, 16px);
+        gap: 4px;
+    }
+
+    .project-link {
+        min-height: 28px;
+        padding: 4px 0;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 769px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-item:last-child {
+        grid-column: 1 / -1;
+        width: calc(50% - 1vw);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-title {
+        font-size: 28px;
+        margin-bottom: 2vh;
+    }
+
+    .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 4vh;
+        max-width: 80%;
+        margin: 5vh auto 0;
+    }
+
+    .project-title,
+    .project-context {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .projects-title {
+        font-size: clamp(24px, 6vw, 28px);
+    }
+
+    .projects-grid {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .projects-block {
+        padding: 2vh 4% 8vh;
+        margin: 1vh 0;
+    }
+
+    .projects-title {
+        font-size: clamp(20px, 5vw, 24px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-item.is-interactive .project-card-inner {
+        transition: none;
+    }
+}
+
 .certificates-section {
     background-color: #ffffff;
     padding: 3vh 7.5%;
@@ -549,6 +811,31 @@ html, body {
         margin-top: 5vh;
         padding-bottom: 1vh;
     }
+}
+
+/* Each inset section owns one equal white gap above its colored block. */
+.projects-section,
+.certificates-section,
+.skills-section {
+    padding-top: 5vh;
+    margin-top: 0;
+    min-height: 0;
+}
+
+.projects-block,
+.certificates-block,
+.skills-block {
+    margin-top: 0;
+}
+
+.projects-section,
+.certificates-section {
+    padding-bottom: 0;
+}
+
+.projects-block,
+.certificates-block {
+    margin-bottom: 0;
 }
 
 /* Experience Section */

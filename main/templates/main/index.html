@@ -22,9 +22,9 @@
     </header>
     <div class="text-section">
         <p>
-            You may be wondering why there is a nature photo on this landing page, given that it's a developer portfolio.
-            To be honest, I just find it beautiful. I took it in the summer of 2023 while visiting a friend in New Zealand.<br>
-            P.S: I highly recommend visiting at least once in your lifetime. You won't regret it!
+            You may be wondering why there's a nature photo on the landing page of a developer portfolio. 
+            To be honest, I simply find it beautiful. I took it in the summer of 2023 while visiting a friend in New Zealand.<br>
+            P.S. I highly recommend visiting New Zealand at least once in your lifetime, you won't regret it!
         </p>
     </div>
         
@@ -43,28 +43,69 @@
                 <p class="about-description">
                     Data Engineer at Sopra Steria with a degree in Applied Data Science from 
                     Universitat Oberta de Catalunya, where I received an academic distinction. 
-                    Focused on building expertise in Deep Learning, Machine Learning, and AI 
+                    Focused on building expertise in Deep Learning, Machine Learning, Neural Networks and robotics 
                     through continuous learning, practical projects, and new technical challenges.
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- SKILLS Section -->
-    <div class="skills-section">
-        <div class="skills-block">
-            <h2 class="skills-title">SKILLS</h2>
-            <div class="skills-grid">
-                <img src="{% static 'main/img/languages/python_logo.svg' %}" alt="Python" title="Python" class="skill-logo" loading="lazy" decoding="async">
-                <img src="{% static 'main/img/languages/pytorch_logo.svg' %}" alt="PyTorch" title="PyTorch" class="skill-logo" loading="lazy" decoding="async">
-                <img src="{% static 'main/img/languages/pandas_logo.svg' %}" alt="Pandas" title="Pandas" class="skill-logo" loading="lazy" decoding="async">
-                <img src="{% static 'main/img/languages/postgresql_logo.svg' %}" alt="PostgreSQL" title="PostgreSQL" class="skill-logo" loading="lazy" decoding="async">
-                <img src="{% static 'main/img/languages/django.svg' %}" alt="Django" title="Django" class="skill-logo" loading="lazy" decoding="async">
-                <img src="{% static 'main/img/languages/powerbi_logo.svg' %}" alt="Power BI" title="Power BI" class="skill-logo" loading="lazy" decoding="async">
-                <img src="{% static 'main/img/languages/git_logo.svg' %}" alt="Git" title="Git" class="skill-logo" loading="lazy" decoding="async">
+    <!-- PROJECTS Section -->
+    <section class="projects-section" aria-labelledby="projects-title">
+        <div class="projects-block">
+            <h2 id="projects-title" class="projects-title">PROJECTS</h2>
+            <div class="projects-grid">
+                <article class="project-item">
+                    <h3 class="project-title">AI Project Assistant</h3>
+                    <p class="project-context">Sopra Steria Internal Hackathon</p>
+                    <button type="button" class="project-toggle" aria-expanded="false" aria-controls="pulseai-description" hidden>Show details</button>
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <img src="{% static 'main/img/projects/PulseAI.jpg' %}" alt="PulseAI dashboard with project progress, confidence scores and integrated chat" class="project-image" width="1280" height="665" loading="lazy" decoding="async">
+                            </div>
+                            <div id="pulseai-description" class="project-back">
+                                <p>Developed an AI assistant to assess project-stage completion, providing confidence scores, progress summaries, issue alerts, and integrated chat.</p>
+                                <a href="https://www.linkedin.com/feed/update/urn:li:activity:7465043860008718336/" target="_blank" rel="noopener noreferrer" class="project-link">Explore more&nbsp;<span aria-hidden="true">&#8599;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-item">
+                    <h3 class="project-title">Hotel4Runners</h3>
+                    <p class="project-context">Bachelor’s Thesis</p>
+                    <button type="button" class="project-toggle" aria-expanded="false" aria-controls="hotel4runners-description" hidden>Show details</button>
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <img src="{% static 'main/img/projects/hfr.png' %}" alt="Hotel4Runners website showing hotels and running routes in Barcelona" class="project-image" width="1753" height="960" loading="lazy" decoding="async">
+                            </div>
+                            <div id="hotel4runners-description" class="project-back">
+                                <p>Developed and deployed an interactive website for Barcelona runners, scoring hotels by running accessibility and displaying running routes and gym information.</p>
+                                <a href="https://hotel4runners.com/" target="_blank" rel="noopener noreferrer" class="project-link">Explore more&nbsp;<span aria-hidden="true">&#8599;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-item">
+                    <h3 class="project-title">Waste Object Detection</h3>
+                    <p class="project-context">Personal Project (GitHub)</p>
+                    <button type="button" class="project-toggle" aria-expanded="false" aria-controls="waste-description" hidden>Show details</button>
+                    <div class="project-card">
+                        <div class="project-card-inner">
+                            <div class="project-front">
+                                <img src="{% static 'main/img/projects/waste_clasif.jpg' %}" alt="Waste detection results with labeled bounding boxes around litter" class="project-image" width="1920" height="1428" loading="lazy" decoding="async">
+                            </div>
+                            <div id="waste-description" class="project-back">
+                                <p>Fine-tuned YOLO26n on a litter dataset (TACO) to detect and classify waste in images, evaluating detection performance using precision, recall and mAP.</p>
+                                <a href="https://github.com/b4l4k/waste_clasif" target="_blank" rel="noopener noreferrer" class="project-link">Explore more&nbsp;<span aria-hidden="true">&#8599;</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- CERTIFICATES Section -->
     <div class="certificates-section">
@@ -99,6 +140,22 @@
         </div>
     </div>
 
+    <!-- SKILLS Section -->
+    <div class="skills-section">
+        <div class="skills-block">
+            <h2 class="skills-title">SKILLS</h2>
+            <div class="skills-grid">
+                <img src="{% static 'main/img/languages/python_logo.svg' %}" alt="Python" title="Python" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/pytorch_logo.svg' %}" alt="PyTorch" title="PyTorch" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/pandas_logo.svg' %}" alt="Pandas" title="Pandas" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/postgresql_logo.svg' %}" alt="PostgreSQL" title="PostgreSQL" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/django.svg' %}" alt="Django" title="Django" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/powerbi_logo.svg' %}" alt="Power BI" title="Power BI" class="skill-logo" loading="lazy" decoding="async">
+                <img src="{% static 'main/img/languages/git_logo.svg' %}" alt="Git" title="Git" class="skill-logo" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </div>
+
     <!-- EXPERIENCE Section -->
     <div class="experience-section">
         <div class="experience-block">
@@ -110,10 +167,10 @@
                         <h3 class="experience-job-title">Data Engineer</h3>
                         <p class="experience-company">Sopra Steria</p>
                         <ul class="experience-bullets">
-                            <li>Automate and enhance data processing pipelines using advanced Pandas factorization and NumPy, reducing execution performance of production workflows and real-time analytics.</li>
-                            <li>Build an end-to-end data pipeline from scratch, automating the ETL architectures to convert raw data into 30+ critical KPIs via custom PowerBI dashboards for data-driven decision-making.</li>
-                            <li>Orchestrate computerized maintenance of 15+ analytics workflows using Python scripts and API integration, and dependency management, ensuring system reliability, scalability, and fault tolerance.</li>
-                            <li>Deploy and architect an automated NLP pipeline, integrating optimized Large Language Models (LLMs) to extract structured information from unstructured text in daily production workflow.</li>
+                            <li>Optimize production data-processing pipelines using Pandas and NumPy, reducing execution time and supporting realtime analytics.</li>
+                            <li>Built an end-to-end ETL pipeline from scratch to transform raw data into 30+ business KPIs, delivered through custom Power BI dashboards.</li>
+                            <li>Automate and maintain 15+ analytics workflows using Python scripts and API integrations.</li>
+                            <li>Develop and implement operational automations to streamline application management, reduce manual intervention, and improve team efficiency.</li>
                         </ul>
                     </div>
                 </div>
@@ -121,13 +178,13 @@
                 <div class="experience-item">
                     <div class="experience-period">Apr 2023 - Mar 2025</div>
                     <div class="experience-details">
-                        <h3 class="experience-job-title">Software Engineer</h3>
+                        <h3 class="experience-job-title">Data Engineer</h3>
                         <p class="experience-company">RRM Consultoria</p>
                         <ul class="experience-bullets">
-                            <li>Engineered robust ETL systems connecting Odoo ERP with external APIs, and Pandas based transformation layers for high-quality data ingestion.</li>
-                            <li>Covered full software lifecycle of custom Python applications, from system design and architecture to deployment on the Odoo Marketplace, achieving commercial adoption by external clients.</li>
-                            <li>Acted as primary technical liaison for 30+ client projects, translating complex business and technical requirements into actionable data specifications and achieving tailored engineering solutions.</li>
-                            <li>Enforced high engineering standards through rigorous code reviews, technical documentation, and debugging, ensuring system stability while reducing by 50% onboarding process time and knowledge transfer.</li>
+                            <li>Owned the full software lifecycle of custom Python applications, from system design to Odoo Marketplace publication, achieving commercial adoption.</li>
+                            <li>Engineered ETL systems connecting Odoo ERP with external APIs, using Pandas to transform and ingest data.</li>
+                            <li>Acted as primary technical liaison for 30+ client projects, translating business and technical requirements into tailored engineering solutions.</li>
+                            <li>Maintained engineering standards through code reviews, technical documentation, and debugging, supporting system stability and reducing onboarding time by 50%.</li>
                         </ul>
                     </div>
                 </div>
@@ -138,8 +195,8 @@
                         <h3 class="experience-job-title">Customer Service Support</h3>
                         <p class="experience-company">Altanetica S.L.</p>
                         <ul class="experience-bullets">
-                            <li>Collaborated closely with technical field teams to coordinate service interventions, enhancing resource allocation and aligning over 2.000+ clients needs to technical execution.</li>
-                            <li>Pursued a proactive approach to high-volume issue resolution, rapidly diagnosing technical inquiries and leading complex case lifecycles.</li>
+                            <li>Coordinated service interventions with technical field teams, supporting resource allocation and service delivery for a 2,000+ client base.</li>
+                            <li>Handled high volumes of technical inquiries, diagnosing issues and managing complex support cases through resolution.</li>
                         </ul>
                     </div>
                 </div>
@@ -269,6 +326,7 @@
             });
         });
     </script>
+    <script defer src="{% static 'main/js/projects.js' %}"></script>
 
 </body>
 </html>
